@@ -1,0 +1,65 @@
+############################
+# Discreption of make file #
+############################
+
+# Define and Why:
+- Makefile is used to compile c, cpp program in specific manner. 
+- If we have large number of file to compile in proper order and
+set some flag then doing it manually hard.
+- Sometime some file need to compile after some other file compiled.
+- Makefile also make sure to compile only those file which are modified
+and not compiled before.
+
+# install dependency package
+- yum install make
+
+# Sample program to create Makefile
+- Rule for Makefile
+- target: file or output produced
+- dependency: file that need to be ready before genarate target
+- If dependency_file is main.o then their orignal file is main.c and 
+dependency_file_of_orignal_file is stack.o
+- EG:
+targe: dependency
+<tab> cmd
+dependency_file: original_file dependency_file_of_orignal_file
+<tab> cmd
+clean:
+<tab> cmd
+
+- Suppose, we have stack.h stack.c main.c files for stack program.
+
+* Solve using shell script: install.sh
+	#!/bin/bash
+	clear
+	ls
+	rm -rf *.o *.exe *.gch # Remove old compiled file
+	gcc -c stack.h stack.c main.c # Compile file
+	gcc *.o -o stack.exe # Create executable file
+	./stack.exe # Execute file
+
+* Solve using Makefile
+	stack.exe: stack.o main.o
+        gcc -o stack.exe stack.o main.o
+	stack.h.gch: stack.h
+        gcc -c stack.h
+	stack.o: stack.c stack.h.gch
+        gcc -c stack.c
+	main.o: main.c stack.o
+        gcc -c main.c
+	clean:
+		rm -rf *.o *.gch *.exe
+
+
+# Run make file
+1] Run clean part to remove old files
+make clean
+2] Create executable file
+make
+3] Execute prgram
+./stack.exe
+
+
+
+
+
