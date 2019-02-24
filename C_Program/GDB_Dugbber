@@ -1,0 +1,37 @@
+
+1. install GDB package
+yum install gdb
+
+2. Convert program to output file
+gcc -g -o output_file program_file.c
+
+3. Open gdb debugger
+gdb output_file
+
+4. Play with dugbugging.
+
+i] Add breakpoint
+break main
+break file_1:fun2
+
+ii] Run Module
+run
+run "arg1" "arg2"
+
+iii] Continue after Break Point
+c
+
+iv] Execute next program line or step over any function calls in the line.
+next
+
+v] Execute next program line (after stopping); step into any function calls in the line.
+step
+
+vi] Print line
+list file_1:fun2
+list  // print 10 ine
+
+
+
+
+
