@@ -19,6 +19,8 @@ and not compiled before.
 - dependency: file that need to be ready before genarate target
 - If dependency_file is main.o then their orignal file is main.c and 
 dependency_file_of_orignal_file is stack.o
+- clean: Type cmd in clean section
+
 - EG:
 targe: dependency
 <tab> cmd
