@@ -1,9 +1,5 @@
 #include "listoperation.h"
 
-ListOperation::ListOperation() {
-    li = NULL;
-}
-
 ListOperation::~ListOperation() {
     deleteList();
 }
@@ -128,6 +124,7 @@ int ListOperation::getAtPos(int pos) {
     } else {
         while (pos != loc) {
             temp = temp->getNext();
+            loc++;
         }
         return temp->getData();
     }
@@ -141,7 +138,6 @@ void ListOperation::Display() {
         cout<<"\t"<<temp->getData();
         temp = temp->getNext();
     }
-
     cout<<"\nCount Node: "<<li.getCount()<<endl;
 }
 
@@ -150,5 +146,33 @@ void ListOperation::deleteList() {
         Node *temp = li.getHead();
         li.setHead(li.getHead()->getNext());
         delete temp;
+    }
+}
+
+void ListOperation::replaceAtPos(int val, int pos) {
+    Node *temp = li.getHead();
+    int loc = 1;
+
+    if(pos > li.getCount()) {
+        cout<<"\nPosition is grater than length of list."<<endl;
+    } else {
+        while (pos != loc) {
+            temp = temp->getNext();
+            loc++;
+        }
+        temp->setData(val);
+    }
+}
+
+void ListOperation::reverseList() {
+    int loc = 1;
+    int temp;
+    Node* next = li.getHead();
+    Node* prev = NULL;
+    while(loc <= li.getCount()/2) {
+        temp = getAtPos(loc);
+        replaceAtPos(getAtPos(li.getCount()-loc+1), loc);
+        replaceAtPos(temp, li.getCount()-loc+1);
+        loc ++;
     }
 }

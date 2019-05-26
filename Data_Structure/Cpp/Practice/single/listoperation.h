@@ -5,7 +5,6 @@ class ListOperation {
         Linklist li;
 
     public:
-        ListOperation();
         ~ListOperation();
         Node* createNode(int);
         void addFirst(int);
@@ -17,4 +16,6 @@ class ListOperation {
         void delAtPos(int);
         int getAtPos(int);
         void deleteList();
+        void reverseList();
+        void replaceAtPos(int val, int pos);
 };
