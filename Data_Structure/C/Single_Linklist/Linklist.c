@@ -21,7 +21,7 @@ void addFrist(List *li, int data){
         li->head = temp;
     }
     li->count++;
-}
+}List* li
 
 void addLast(List *li, int data){
     N *temp = (N*)malloc(sizeof(N));
