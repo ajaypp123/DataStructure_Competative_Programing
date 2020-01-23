@@ -42,7 +42,7 @@ class Employee: public Person {
 };
 
 int main() {
-    Employee e("ajay", 23, 333, "seagate");
+    Employee e("ajay", 23, 333, "abc");
     //Upcasting
     Person *p = &e;
 
