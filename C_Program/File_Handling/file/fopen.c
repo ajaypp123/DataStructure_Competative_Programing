@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 
 void main()
 {
@@ -9,12 +8,12 @@ void main()
 	{
 		c=fgetc(file);
 		printf("%c",c);
-		     
+
 	}
 	while(c != EOF);
-	
+
 	printf("\n--------\n");
-	
+
 	fclose(file);
-	
+
 }
