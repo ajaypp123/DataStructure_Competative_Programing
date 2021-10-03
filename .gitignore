@@ -48,3 +48,6 @@
 *.mod*
 *.cmd
 .tmp_versions
+
+# Java
+*.class
