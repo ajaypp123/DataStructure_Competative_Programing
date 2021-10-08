@@ -71,6 +71,7 @@ public class CountSubsetDiff {
             //System.out.println(T[T.length-1][j]);
             if(T[T.length-1][j] > 0) {
                 if(Math.abs(2*j-total) == diff) {
+                    // j-(total-j) = 2j-total == diff
                     count += T[T.length-1][j];
                 }
             }

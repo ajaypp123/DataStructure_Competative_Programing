@@ -23,6 +23,20 @@ import java.util.Arrays;
             i   i - arr[j-1] >= 0
                 total += arr[i-arr[j-1]] till total coins
 
+(){
+    //n==0 -> 0
+    //res[5+1]
+    res[0] = 1
+
+    for(i to a.len){
+        for(j=1 to res.len) {
+            if(j-a[i]>=0) {
+                r[j] = res[j]+res[j-a[i]]
+            }
+        }
+    }
+}
+
 */
 
 
