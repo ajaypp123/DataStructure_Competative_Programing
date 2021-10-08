@@ -45,11 +45,11 @@ public class knapsack_tabulation {
         res[0] = 0;
 
         // Fill from 0 to W
-        for(int i=1; i<=W; i++) {
+        for(int i=0; i<wt.length; i++) {
             // For each wt[]
-            for(int j=0; j<=wt.length-1; j++) {
-                if(i-wt[j] >= 0) {
-                    res[i] = Math.max(res[i], val[j] + res[i-wt[j]]);
+            for(int j=1; j<res.length; j++) {
+                if(j-wt[i] >= 0) {
+                    res[j] = Math.max(res[j], val[i] + res[j-wt[i]]);
                 }
             }
         }
