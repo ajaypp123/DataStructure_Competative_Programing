@@ -3,7 +3,28 @@
  * str = nitin
  * Output = 2
  */
+/*
+(str, i, j)
+if(i>j) {
+    re 0
+}
 
+i==j
+    T[i][j] = 0
+
+if(isP(str.substring(i, j+1))) {
+    T[i][j] = 0
+    return 0
+}
+
+min = MAX
+for(k=i to k<j) {
+    T[i][k] = (str, i, k)
+    T[k+1][j] = (str, k+1, j)
+    T[i][j] = [i][k] + [k+1][j] + 1
+}
+re T[i][j]
+*/
 public class PalendromPartition {
     public static void main(String[] args) {
         String str = "abc";
