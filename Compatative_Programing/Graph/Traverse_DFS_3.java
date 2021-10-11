@@ -1,7 +1,10 @@
 
 /*
 Implement graph traverse BFS from given metrix
-
+--------------------------------------
+Complexity: (Eg: 1 - 2 - 3 - 4 - 5)
+Time: O(V+E)
+Space: O(V+V-1)=O(2V)    v:queue:v-1     v:vis:v
 ---------------------------------------
 
 BFS
