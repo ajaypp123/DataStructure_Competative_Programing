@@ -1,12 +1,13 @@
-# Graph Compatative Programing
+# Graph Competitive Programing
 
 ## Content
 
 1. [Implement graph](ImplementGraph_1.java)
     - Metrix Implementation
+    - Adjacency List Implementation
     - Points to graph implementation
 
-2. Graph Traversal
+1. Graph Traversal
     - [Breadth First Search](Traverse_BFS_2.java)
         - Metrix Traverse
         - Points graph traverse
@@ -15,22 +16,28 @@
         - Points graph traverse
     - Problem:
         - Find min edges distance (BFS)
-        - Deapth is high, find live member in family tree (DFS)
-        - Family tree, parant who died early (BFS)
-        - Deapth check or longest deapth (DFS)
-        - Sortest Path (BFS)
-        - Maze, Sudoku
+        - Depth is high, find live member in family tree (DFS)
+        - Family tree, parent who died early (BFS)
+        - Depth check or longest depth (DFS)
+        - Shortest Path (BFS)
+        - Maze, Sudoku (DFS)
 
-3. Graph connected/unconnected component
-    - [DFS](ConnectedGraph_3.java)
-    - [BFS](ConnectedGraph_3.java)
-    - Union Find (Only for undirected graph)
+1. Graph connected and Strongly Connected component
+    - Connected Component (Undirected Graph)
+        - [DFS](ConnectedGraph_3.java)
+        - [BFS](ConnectedGraph_3.java)
+        - Union Find (Only for undirected graph)
+    - Strongly Connected Component *TBD (Directed Graph)
 
-4. [Union Find undirected graph *TBD](UnionFind_4.java)
+1. [Topological Sorting](TopologicalSort.java)
+    - DFS
+    - BFS (Kahn)
+
+1. [Union Find undirected graph *TBD](UnionFind_4.java)
     - Find Cycle
     - count component
 
-5. Cycle Detection
+1. Cycle Detection
     - Undirected Graph
         - BFS
         - DFS
@@ -38,3 +45,10 @@
     - Directed graph
         - BFS
         - DFS
+
+1. Minimum Cost Spanning Tree
+    - Kruskal
+    - Prims
+
+1. Shortest Path
+    - Single source shortest path (Diskastra)
