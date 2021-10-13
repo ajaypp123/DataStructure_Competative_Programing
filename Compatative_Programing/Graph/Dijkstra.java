@@ -6,10 +6,6 @@
 // Importing utility classes
 import java.util.*;
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
 class Edge implements Comparable<Edge>{
 
     public int x;

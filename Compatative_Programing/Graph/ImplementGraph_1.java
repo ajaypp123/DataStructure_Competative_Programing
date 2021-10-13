@@ -106,8 +106,8 @@ public class ImplementGraph_1 {
 	}
 
 	private static void printGraph(NewGraph g) {
-		for(Map.Entry m: g.linkedMap.entrySet()) {
-			System.out.println(m.getKey() + " " + m.getValue().toString());
+		for(int i: g.linkedMap.keySet()) {
+			System.out.println(i + " " + g.linkedMap.get(i).toString());
 		}
 	}
 
