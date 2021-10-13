@@ -22,16 +22,18 @@
         - Shortest Path (BFS)
         - Maze, Sudoku (DFS)
 
+1. Topological Sorting
+    - [DFS]((TopologicalSortDFS.java)
+    - [BFS (Kahn)](TopologicalSortBFS.java)
+    - Problems:
+        - There is dependency in graph {0,1} here 1 must complete before 0. then find seq for {{},{},...}
+
 1. Graph connected and Strongly Connected component
     - Connected Component (Undirected Graph)
         - [DFS](ConnectedGraph_3.java)
         - [BFS](ConnectedGraph_3.java)
         - Union Find (Only for undirected graph)
     - Strongly Connected Component *TBD (Directed Graph)
-
-1. [Topological Sorting](TopologicalSort.java)
-    - DFS
-    - BFS (Kahn)
 
 1. [Union Find undirected graph *TBD](UnionFind_4.java)
     - Find Cycle
