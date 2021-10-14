@@ -22,15 +22,16 @@ Union Find:
     1. MakeSet
         It create single set of each node
     2. Union
-        It combine 2 set
+        It combine 2 set.
     3. Find
         It detect root/parent of node
+
 */
 
 //import java.util.*;
 
 // G has edge and vertex
-class UnionFind_4 {
+class UnionFind {
     public static void main(String[] args) {
 
     }

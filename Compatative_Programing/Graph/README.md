@@ -31,9 +31,9 @@ git clean -xdf
         - [DFS](ConnectedGraph_3.java)
         - [BFS](ConnectedGraph_3.java)
         - Union Find (Only for undirected graph)
-    - [Strongly Connected Component *TBD (Directed Graph)](StronglyConnected.java)
-        - Tarjan's Algorithm
-        - Kosaraju's Algorithm
+    - Strongly Connected Component (Directed Graph)
+        - [Tarjan's Algorithm (***TBD**)](StronglyConnectedTarjan.java)
+        - [Kosaraju's Algorithm](StronglyConnectedKosaraju.java)
 
 1. Topological Sorting
     - [DFS](TopologicalSortDFS.java)
@@ -41,9 +41,13 @@ git clean -xdf
     - Problems:
         - There is dependency in graph {0,1} here 1 must complete before 0. then find seq for {{},{},...}
 
-1. [Union Find undirected graph *TBD](UnionFind_4.java)
+1. [Union Find undirected graph *TBD](UnionFind.java)
     - Find Cycle
     - count component
+    - Problem:
+        - Network Connectivity subset
+        - Check if path exist in undirected graph.
+        - Subset of same set.
 
 1. Cycle Detection
     - Undirected Graph
