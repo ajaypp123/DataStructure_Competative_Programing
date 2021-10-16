@@ -41,7 +41,7 @@ git clean -xdf
     - Problems:
         - There is dependency in graph {0,1} here 1 must complete before 0. then find seq for {{},{},...}
 
-1. [Union Find undirected graph *TBD](UnionFind.java)
+1. [Union Find undirected graph](UnionFind.java)
     - Find Cycle
     - count component
     - Problem:
@@ -51,16 +51,26 @@ git clean -xdf
 
 1. Cycle Detection
     - Undirected Graph
-        - BFS
-        - DFS
-        - Union Disjoint Set (Covered in 4)
+        - BFS // Similar to topological sorting consider both edge.
+        - DFS // Similar to topological sorting consider both edge.
+        - Union Disjoint Set (Covered above)
     - Directed graph
         - [DFS Topological sort](TopologicalSortDFS.java)
         - [BFS Topological sort](TopologicalSortBFS.java)
 
 1. Minimum Cost Spanning Tree
-    - Kruskal
-    - Prims
+    - Undirected graph
+        - [Kruskal](KruskalSpanningTree.java)
+        - Prims
+    - Directed Graph **TBD**
 
 1. Shortest Path
-    - Single source shortest path (Diskastra)
+    - shortest Edge (BFS)
+    - [Single source shortest path (Dijkstra)](Dijkstra.java)
+        - Find shortest path
+    - [Single source shortest path (Bellman Ford)](BellmanFord.java)
+        - Find shortest path
+        - Check graph it contain negative cycle
+    - [All Pair shortest Path]
+        - [Floyd Warshall](FloydWarshall.java)
+        - Johnson's algorithm ***TBD**
