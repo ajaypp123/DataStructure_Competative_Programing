@@ -1,3 +1,4 @@
+
 ```
 git clean -xdf
 ```
@@ -7,18 +8,19 @@ git clean -xdf
 ## Content
 
 1. [Implement graph](ImplementGraph_1.java)
-    - Metrix Implementation
+    - Matrix Implementation
     - Adjacency List Implementation
     - Points to graph implementation
 
 1. Graph Traversal
     - [Breadth First Search](Traverse_BFS_2.java)
-        - Metrix Traverse
+        - Matrix Traverse
         - Points graph traverse
     - [Depth First Search](Traverse_DFS_3.java)
-        - Metrix Traverse
+        - Matrix Traverse
         - Points graph traverse
     - Problem:
+        - [Arrival and departure time of vertices in DFS](ArrivalDepartureDFS.java)
         - Find min edges distance (BFS)
         - Depth is high, find live member in family tree (DFS)
         - Family tree, parent who died early (BFS)
@@ -57,6 +59,16 @@ git clean -xdf
     - Directed graph
         - [DFS Topological sort](TopologicalSortDFS.java)
         - [BFS Topological sort](TopologicalSortBFS.java)
+
+1. Eulerian Algorithm
+    - [Directed graph](DirectedEulerian.java)
+        - Eulerian path
+        - Eulerian cycle
+    - [Undirected graph](UnDirectedEulerian.java)
+        - Eulerian path
+        - Eulerian cycle
+
+1. Graph Coloring (***TBD**)
 
 1. Minimum Cost Spanning Tree
     - Undirected graph
