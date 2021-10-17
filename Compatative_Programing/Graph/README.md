@@ -21,7 +21,9 @@ git clean -xdf
         - Points graph traverse
     - Problem:
         - [Arrival and departure time of vertices in DFS](ArrivalDepartureDFS.java)
+        - [Find Root vertex of graph](RootVertex.java)
         - Find min edges distance (BFS)
+        - Find Path between 2 vertex
         - Depth is high, find live member in family tree (DFS)
         - Family tree, parent who died early (BFS)
         - Depth check or longest depth (DFS)
@@ -42,6 +44,8 @@ git clean -xdf
     - [BFS (Kahn)](TopologicalSortBFS.java)
     - Problems:
         - There is dependency in graph {0,1} here 1 must complete before 0. then find seq for {{},{},...}
+        - [Find correct order of alphabets in a given dictionary of ancient origin](AncientDict.java)
+        - [Find all topological short order or count of topological order](AllTopologicalSort.java) ***TBD**
 
 1. [Union Find undirected graph](UnionFind.java)
     - Find Cycle
@@ -67,6 +71,8 @@ git clean -xdf
     - [Undirected graph](UnDirectedEulerian.java)
         - Eulerian path
         - Eulerian cycle
+    - Problem:
+        - [Check if a set of words can be rearranged to form a circle](WordInCircle.java)
 
 1. Graph Coloring (***TBD**)
 
@@ -86,3 +92,10 @@ git clean -xdf
     - [All Pair shortest Path]
         - [Floyd Warshall](FloydWarshall.java)
         - Johnson's algorithm ***TBD**
+    - Problems:
+        - [Single source shortest path](LongestPath.java) // Modification needed
+        - Compute the least cost path in a weighted digraph (Dijkstra or BFS)
+        - [Least cost path in a digraph from a given source to a destination having exactly `m` edges](LeastMPath.java)
+        - Chess Knight Problem (BFS) ***TBD**
+        - Snake and Ladder (BFS) ***TBD**
+        - Print all Hamiltonian paths present in a graph ***TBD**
