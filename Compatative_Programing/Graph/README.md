@@ -74,7 +74,11 @@ git clean -xdf
     - Problem:
         - [Check if a set of words can be rearranged to form a circle](WordInCircle.java)
 
-1. Graph Coloring (***TBD**)
+1. Graph Coloring
+    - [Graph Coloring](GraphColoring.java)
+    - [Find Chromatic number for graph](ChromaticNumber.java)
+    - [Check if graph is Bipartite](CheckBipartite.java)
+    - [K-colorable print all combination](KColorable.java)  ***TBD**
 
 1. Minimum Cost Spanning Tree
     - Undirected graph
@@ -99,3 +103,9 @@ git clean -xdf
         - Chess Knight Problem (BFS) ***TBD**
         - Snake and Ladder (BFS) ***TBD**
         - Print all Hamiltonian paths present in a graph ***TBD**
+
+1. Other points
+    - Ford Fulkerson Algorithm | Maximum Flow Problem
+    - Articulation Points | Cut Vertices | Tarjan's Algorithm
+    - Dinic algorithm | Maximum Flow Problem | Network Flow
+    - Hamiltonian Cycle (Circuit) | Hamiltonian Path
