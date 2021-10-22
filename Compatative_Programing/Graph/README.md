@@ -36,8 +36,11 @@ git clean -xdf
         - [BFS](ConnectedGraph_3.java)
         - Union Find (Only for undirected graph)
     - Strongly Connected Component (Directed Graph)
-        - [Tarjan's Algorithm (***TBD**)](StronglyConnectedTarjan.java)
+        - [Tarjan's Algorithm](StronglyConnectedTarjan.java)
         - [Kosaraju's Algorithm](StronglyConnectedKosaraju.java)
+    - Problem:
+        - Bridge
+        - Articulation Point
 
 1. Topological Sorting
     - [DFS](TopologicalSortDFS.java)
@@ -78,7 +81,7 @@ git clean -xdf
     - [Graph Coloring](GraphColoring.java)
     - [Find Chromatic number for graph](ChromaticNumber.java)
     - [Check if graph is Bipartite](CheckBipartite.java)
-    - [K-colorable print all combination](KColorable.java)  ***TBD**
+    - [K-colorable print all combination](KColorable.java)
 
 1. Minimum Cost Spanning Tree
     - Undirected graph
