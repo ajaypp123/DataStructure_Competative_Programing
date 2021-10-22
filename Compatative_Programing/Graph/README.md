@@ -20,6 +20,7 @@ git clean -xdf
         - Matrix Traverse
         - Points graph traverse
     - Problem:
+        - [Hamiltonian Path Cycle](HamiltonianPathCycle.java)
         - [Arrival and departure time of vertices in DFS](ArrivalDepartureDFS.java)
         - [Find Root vertex of graph](RootVertex.java)
         - Find min edges distance (BFS)
@@ -39,8 +40,14 @@ git clean -xdf
         - [Tarjan's Algorithm](StronglyConnectedTarjan.java)
         - [Kosaraju's Algorithm](StronglyConnectedKosaraju.java)
     - Problem:
-        - Bridge
-        - Articulation Point
+        - Detect all edges in graph **TBD**
+        - Undirected graph
+            - [Bridge](BridgeFindTarjan.java)
+            - [Articulation Point](ArticulationPoint.java) **TBD**
+        - Directed Graph
+            - Detect all edges in graph **TBD
+            - Strong Bridge **TBD
+            - Strong Articulation Point **TBD
 
 1. Topological Sorting
     - [DFS](TopologicalSortDFS.java)

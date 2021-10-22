@@ -84,7 +84,7 @@ Step:
     findSSC(low[])
         for(i=0 to len)
             // if low[i] == i : it is root add key in map
-            hm.put(i, arraylist)
+            hm.put(i, Arraylist)
         for(i=0 to len)
             hm.get(low[i]).add(i)
 
@@ -104,12 +104,12 @@ class StronglyConnectedTarjan {
     private static List<List<Integer>> getMap(int V, int[][] points) {
         List<List<Integer>> list = new ArrayList<>();
 
-        for(int i=0; i<V; i++) {
+        for (int i = 0; i < V; i++) {
             List<Integer> li = new ArrayList<>();
             list.add(li);
         }
 
-        for(int[] p: points) {
+        for (int[] p : points) {
             int x = p[0];
             int y = p[1];
             // x -> y
@@ -118,23 +118,20 @@ class StronglyConnectedTarjan {
         return list;
     }
 
-    private static int DFS(List<List<Integer>> map, Stack<Integer> st,
-                            int[] discover, int[] low, int[] visited, int timer) {
+    private static int DFS(List<List<Integer>> map, int top, int[] discover, int[] low, int[] visited, int timer) {
         // visit v
-        int top = st.peek();
         visited[top] = 1;
         discover[top] = timer;
         low[top] = timer;
 
         // add all adj node
-        for(int adj: map.get(top)) {
+        for (int adj : map.get(top)) {
             // if adj is not visited yet
-            if(visited[adj] == 0) {
-                st.push(adj);
-                DFS(map, st, discover, low, visited, ++timer);
+            if (visited[adj] == 0) {
+                DFS(map, adj, discover, low, visited, ++timer);
                 low[top] = Math.min(low[top], low[adj]);
 
-            } else if(visited[adj] == 1) {
+            } else if (visited[adj] == 1) {
                 // visited and in stack, found back edge ie adj --> top --> adj
                 low[top] = low[adj];
             } else {
@@ -146,15 +143,12 @@ class StronglyConnectedTarjan {
 
         // all adj are visited, now we can remove it
         visited[top] = -1;
-        st.pop();
         return timer;
     }
 
     private static int stronglyConnected(int V, int[][] points) {
         // perform DFS for that get map
         List<List<Integer>> map = getMap(V, points);
-        // Stack for DFS
-        Stack<Integer> st = new Stack<>();
         // track visited, low arrival and arrival/discover
         int[] discover = new int[V];
         int[] low = new int[V];
@@ -163,17 +157,16 @@ class StronglyConnectedTarjan {
 
         // Add first element to stack
         int t = 0;
-        for(int i=0; i<V; i++) {
-            if(visited[i] == 0) {
-                st.push(i);
-                t = DFS(map, st, discover, low, visited, t);
+        for (int i = 0; i < V; i++) {
+            if (visited[i] == 0) {
+                t = DFS(map, i, discover, low, visited, t);
             }
         }
 
         // low have root of all connected component
         HashMap<Integer, ArrayList<Integer>> hm = new HashMap<>();
-        for(int i=0; i<V; i++) {
-            if(hm.containsKey(low[i])) {
+        for (int i = 0; i < V; i++) {
+            if (hm.containsKey(low[i])) {
                 hm.get(low[i]).add(i);
             } else {
                 ArrayList<Integer> arr = new ArrayList<>();
@@ -181,24 +174,24 @@ class StronglyConnectedTarjan {
                 hm.put(low[i], arr);
             }
         }
-        System.out.println("Map: " + hm.toString());
+        System.out.println("SSC: " + hm.toString());
         return hm.size();
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         /*
-            Map: {0=[0, 1, 2], 3=[3], 4=[4, 5, 6], 7=[7]}
-            Output: 4
-
-            Map: {0=[0, 1, 2], 1=[4, 5, 6], 3=[3], 4=[7]}
-            Output: 4
-        */
-		int points1[][] = new int[][]{{0,1},{1,2},{2,0},  {2,3},{3,4},  {4,5},{5,6},{6,4},  {4,7},{6,7}};
-		System.out.println("Output: " + stronglyConnected(8, points1));
+         * SSC: {0=[0, 1, 2], 3=[3], 4=[4, 5, 6], 7=[7]} Output: 4
+         *
+         * SSC: {0=[0, 1, 2], 1=[4, 5, 6], 3=[3], 4=[7]} Output: 4
+         */
+        int points1[][] = new int[][] { { 0, 1 }, { 1, 2 }, { 2, 0 }, { 2, 3 }, { 3, 4 }, { 4, 5 }, { 5, 6 }, { 6, 4 },
+                { 4, 7 }, { 6, 7 } };
+        System.out.println("Output: " + stronglyConnected(8, points1));
 
         System.out.println();
 
-        int points2[][] = new int[][]{{0,1},{1,2},{2,0},  {2,3},{4,3},  {4,5},{5,6},{6,4},  {4,7},{6,7}};
-		System.out.println("Output: " + stronglyConnected(8, points2));
-	}
+        int points2[][] = new int[][] { { 0, 1 }, { 1, 2 }, { 2, 0 }, { 2, 3 }, { 4, 3 }, { 4, 5 }, { 5, 6 }, { 6, 4 },
+                { 4, 7 }, { 6, 7 } };
+        System.out.println("Output: " + stronglyConnected(8, points2));
+    }
 }
