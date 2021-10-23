@@ -20,7 +20,7 @@ git clean -xdf
         - Matrix Traverse
         - Points graph traverse
     - Problem:
-        - [Hamiltonian Path Cycle](HamiltonianPathCycle.java)
+        - [Hamiltonian Path/Cycle, Print all path DFS](HamiltonianPathCycle.java)
         - [Arrival and departure time of vertices in DFS](ArrivalDepartureDFS.java)
         - [Find Root vertex of graph](RootVertex.java)
         - Find min edges distance (BFS)
@@ -40,7 +40,8 @@ git clean -xdf
         - [Tarjan's Algorithm](StronglyConnectedTarjan.java)
         - [Kosaraju's Algorithm](StronglyConnectedKosaraju.java)
     - Problem:
-        - Detect all edges in graph **TBD**
+        - [Find island in graph (Connected component)](FindIsland.java)
+            // create graph and find no. of connected component
         - Undirected graph
             - [Bridge](BridgeFindTarjan.java)
             - [Articulation Point](ArticulationPoint.java) **TBD**
@@ -73,6 +74,8 @@ git clean -xdf
     - Directed graph
         - [DFS Topological sort](TopologicalSortDFS.java)
         - [BFS Topological sort](TopologicalSortBFS.java)
+    - Problem:
+        - [Course scheduling deadlock](CourseScheduling.java)
 
 1. Eulerian Algorithm
     - [Directed graph](DirectedEulerian.java)
@@ -107,15 +110,13 @@ git clean -xdf
         - [Floyd Warshall](FloydWarshall.java)
         - Johnson's algorithm ***TBD**
     - Problems:
+        - [Print All Path Source to Destination DFS](AllPathDFS.java) **TBD**
         - [Single source shortest path](LongestPath.java) // Modification needed
         - Compute the least cost path in a weighted digraph (Dijkstra or BFS)
-        - [Least cost path in a digraph from a given source to a destination having exactly `m` edges](LeastMPath.java)
-        - Chess Knight Problem (BFS) ***TBD**
-        - Snake and Ladder (BFS) ***TBD**
-        - Print all Hamiltonian paths present in a graph ***TBD**
+        - [Least cost path in a digraph from a given source to a destination having exactly `m` edges](LeastMPath.java) ***TBD**
+        - [Chess Knight Problem (BFS)](ChessKnight.java) ***TBD**
+        - [Snake and Ladder (BFS)](SnakeLadder.java) ***TBD**
 
 1. Other points
     - Ford Fulkerson Algorithm | Maximum Flow Problem
-    - Articulation Points | Cut Vertices | Tarjan's Algorithm
     - Dinic algorithm | Maximum Flow Problem | Network Flow
-    - Hamiltonian Cycle (Circuit) | Hamiltonian Path
