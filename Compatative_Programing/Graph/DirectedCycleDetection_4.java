@@ -72,21 +72,6 @@ class BFSCycle {
     }
 }
 
-// DFS Cycle Detect
-class DFSCycle {
-    /*
-        - Consider Stack
-        - Visited array
-            1. visited element          1
-            2. not visited              0
-            3. visited and in Stack    -1
-    */
-
-    private static boolean isCycle(int[][] graph) {
-        return false;
-    }
-}
-
 public class DirectedCycleDetection_4 {
 
     private static boolean isCycle(int[][] graph) {

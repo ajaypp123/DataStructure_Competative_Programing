@@ -1,12 +1,19 @@
 
 /*
+Problem: Count and Print Number of component graph
+
 3. Graph connected/unconnected component
     - DFS
     - BFS
-    - Union Find (Only for undirected graph) (Not in this file)
+    - Union Find (Not in this file)
 
-Count and Print Number of component graph
-
+==============================================
+Directed and Undirected graph are same for connected component.
+    - If Directed graph consider both In and Out edge. ie: 1->2 and 2->1
+    - Once converted in Undirected graph then find connected component
+==============================================
+Time Complexity: O(V+E)
+Space Complexity: O(V)
 ==============================================
 
 Algorithm:
