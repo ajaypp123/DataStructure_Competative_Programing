@@ -7,20 +7,24 @@ interface Resource {
 }
 
 class AuthorResource implements Resource{
+  @Override
   public String image() {
     return "Author Image";
   }
 
+  @Override
   public String info() {
     return "Author Info";
   }
 }
 
 class BookResource  implements Resource {
+  @Override
   public String image() {
     return "Book Image";
   }
 
+  @Override
   public String info() {
     return "Book Info";
   }
@@ -28,19 +32,20 @@ class BookResource  implements Resource {
 
 // abstraction
 interface View {
-  public View(Resource r);
+  //public (Resource r)
   public void show();
 }
 
 
 class ShortView implements View{
-  
+
   Resource r;
 
   public ShortView(Resource r) {
     this.r = r;
   }
 
+  @Override
   public void show() {
     System.out.println(r.image());
   }
@@ -48,18 +53,19 @@ class ShortView implements View{
 }
 
 class LongView implements View{
-  
+
   Resource r;
 
   public LongView(Resource r) {
     this.r = r;
   }
 
+  @Override
   public void show() {
     System.out.println(r.image());
     System.out.println(r.info());
   }
-  
+
 }
 
 
