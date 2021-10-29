@@ -32,22 +32,25 @@
     - Print string in reverse
 
 1. Greatest left and right
-    - Near greatest to left
-    - Near greatest to right    NextLargestElement
-    - Near smallest to left
+    - [Near greatest to left](NextGraterElementLeft.java)
+    - [Near greatest to right](NextLargestElement.java)
+    - [Near smallest to left](NextSmallestLeft.java)
     - Near smallest to right
+    - [Next grater in loop](NextLargeInLoop.java)
+    - Application:
+        - [Stock Span](StockSpanProblem.java)
+        - Maximum area of histogram
+        - Max Area of rectangle in binary matrix
 
 1. Elimination
     - [Celebrity Problem](CelebrityProblem.java)
 
-- chart
-1. Stock span problem
-2. Maximum area of histogram
+1. Stack Recursion
+    - [Reverse Stack](ReverseStack.java)
+    - [Sort Stack](SortStack.java)
 
-- Max Area of rectangle in binary matrix
+
 
 - Rain water tapping
-- Implemaining min stack
-- Celebrity problem
 - Long valid paranthesis
 - TOH
