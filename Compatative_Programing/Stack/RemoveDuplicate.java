@@ -1,5 +1,8 @@
 
 /*
+
+Remove duplicate and return lexicographical string
+
 Given a string s, remove duplicate letters so that every letter appears once and only once. You must make sure your result is the smallest in lexicographical order among all possible results.
 
 
@@ -14,14 +17,9 @@ Output: "acdb"
 
 =====================================
 
-lexicographical mean seq of this char should not disturb but
-    try to keep left small and right big
+same as remove k digit
 
-Solution:
-    In reverse traverse
-        don't put big element infront of small element.
-
-    But in above condition if element already not visited then put infront of small element
+just traverse in reverse order
 
 */
 
@@ -64,5 +62,9 @@ public class RemoveDuplicate {
 
     public static void main(String[] args) {
         System.out.println(new RemoveDuplicate().removeDuplicateLetters("cbacdcbc"));
+
+
+        System.out.println(new RemoveDuplicate().removeDuplicateLetters("abacb"));
+
     }
 }
