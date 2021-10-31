@@ -6,6 +6,7 @@ https://www.youtube.com/playlist?list=PL-Jc9J83PIiE1_SifBEWRsD-fzxrvkja9
 1. Implementation
     - [ArrayStack with middle element](ArrayStack.java)
     - [Validate Stack](ValidateStack.java)
+    - [Increment Stack](IncrementStack.java)
 
 1. Queue
     - Stack using Queue
@@ -44,8 +45,14 @@ https://www.youtube.com/playlist?list=PL-Jc9J83PIiE1_SifBEWRsD-fzxrvkja9
         - [Stock Span](StockSpanProblem.java)
         - Maximum area of histogram
         - Max Area of rectangle in binary matrix
-        - [Decode a given sequence to construct a minimum number without repeated digits](DecodeSeq.java) [Link](https://www.techiedelight.com/decode-the-given-sequence-construct-minimum-number-without-repeated-digits/)
+        - [Decode a given sequence to construct a minimum number without repeated digits](DecodeSeq.java)
         - [Rain water tapping](RainWaterTapping.java)
+        - 132 Pattern | LeetCode 456 ***TBD**
+
+1. Lexicographical Order
+    - [Remove K Digits to get smallest digit | Leetcode 402](RemoveKDigit.java)
+    - [Remove duplicate and return lexicographical string](RemoveDuplicate.java) ***TBD**
+    - [Find the Most Competitive Subsequence](MostComSubSeq.java)
 
 1. Elimination
     - [Celebrity Problem](CelebrityProblem.java)
@@ -65,3 +72,4 @@ https://www.youtube.com/playlist?list=PL-Jc9J83PIiE1_SifBEWRsD-fzxrvkja9
     - [Remove Outermost parenthesis](RemoveOuterMost.java)
     - [Score Parenthesis](ScoreBrackets.java)
     - [Reverse String between each pair](ReverseWhinInPair.java)
+    - [Check If Word Is Valid After Substitutions](ValidSubstitution.java)
