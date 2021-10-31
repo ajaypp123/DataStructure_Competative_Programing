@@ -9,16 +9,24 @@ PriorityQueue<Integer> pq = new PriorityQueue<>();
 ```
 
 # HashMap
+```
+HashMap<Integer, Integer> hs = new HashMap<>();
+```
 
 # HashSet
+```
+HashSet<Integer> pq = new HashSet<>();
+```
 
 # Content
 
 1. PriorityQueue
     - Implement min and max priority queue. ***TBD**
     - Implement Heap ***TBD**
+    - [Median Priority Queue = Find Median from Data Stream](MedianPQ.java)
 
 1. Kth Element in Array
+    - K largest/smallest elements in array.
     - [Kth Smallest in Array](K_smallest.java)
     - Kth Largest in Array
     - [Kth sorted array](k_sorted.java)
@@ -29,6 +37,7 @@ PriorityQueue<Integer> pq = new PriorityQueue<>();
     - [Top Kth high frequency element](KTopFre.java)
         - [Frequency Sort](FreqSort.java)
     - [Kth closest point](ClosestPoint.java)
+    - [Merge k sorted list](MergeKSorted.java) ***TBD**
 
 1. Optimal Merge Solution
     - [Connect Ropes to Minimize the Cost](ConnectRope.java)
