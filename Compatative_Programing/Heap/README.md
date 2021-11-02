@@ -1,6 +1,8 @@
 
 
+
 # Priority Queue
+
 - If there is window and need some sorting.
 
 ```
@@ -8,17 +10,6 @@ PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 PriorityQueue<Integer> pq = new PriorityQueue<>();
 ```
 
-# HashMap
-```
-HashMap<Integer, Integer> hs = new HashMap<>();
-```
-
-# HashSet
-```
-HashSet<Integer> pq = new HashSet<>();
-```
-
-# Content
 
 1. PriorityQueue
     - Implement min and max priority queue. ***TBD**
@@ -42,5 +33,27 @@ HashSet<Integer> pq = new HashSet<>();
 1. Optimal Merge Solution
     - [Connect Ropes to Minimize the Cost](ConnectRope.java)
 
+# HashMap
+```
+HashMap<Integer, Integer> hs = new HashMap<>();
+```
+
+# HashSet
+```
+HashSet<Integer> pq = new HashSet<>();
+```
+
+1. Graph
+    - [Employees Under every Manager](EmployeeCount.java)
+    - [Check if Array Pairs are Divisible by K](PairDivisible.java)
+
+
+1. Distinct Count HashSet
+    - [Distinct Elements in Windows of Size K](CountInWindow.java)
+
+1. Subarray Sliding Window
+    - Largest SubArray with Sum 0
+    - Count of Zero Sum Subarray
+    - Length of the largest subarray with contiguous elements
 
 - [Remove Duplicate Letters and return short string](RemoveDuplicate.java)

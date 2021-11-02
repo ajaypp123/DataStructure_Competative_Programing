@@ -1,16 +1,28 @@
 
 # Problems
 
-### Fix size window
-1. Min/Max sub array of size k.
-2. first -ve in every subarray of size k
-3. count occourance of anagram
-4. Max of all subarry of size k
-5. Max min of every window size
+## Fix size window
+1. [Min/Max sub array of size k](MaxSumWindow.java)
+1. First -ve in every subarray of size k
+        - Without Queue
+        - [With Queue](FirstNegative.java)
+1. Max min of array with window size k
+1. [Find max sum for sliding window k](MaxWindow.java)
+1. [Count occurrence of anagram](AnagramCount.java)
 
-### Variable size window
-1. longest and smallest largest suarray of sum k
-2. longest substring with k distinct char
-3. length of largest substring with no repeating char
-4. pick toy
-5. minimum window substring
+## Variable size window
+1. [Longest and smallest subarray of sum k](LongestSumSubArray.java)
+1. [Longest substring with k distinct char](LongestDistinctString.java)
+1. Length of largest substring with no repeating char
+1. Pick toy
+1. Minimum window substring
+
+
+# Variable size window
+
+1. Length of the largest subarray with contiguous elements
+2. Minimum Window Substring with all unique char
+3. Count Substrings without Repeating Characters
+4. Longest Substring With Exactly K Distinct Characters
+5. Count Substrings with K Distinct Characters ***TBD**
+6. Count of Equivalent Subarrays
