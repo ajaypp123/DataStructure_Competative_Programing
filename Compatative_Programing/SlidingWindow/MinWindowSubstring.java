@@ -1,7 +1,7 @@
 
 /*
 
-Find min window containg all letter from s2 in s1 window
+Find min window contains all letter from s2 in s1 window
         String s1 = "ADOBECODEBANC";
         String s2 = "ABC";
         Output: 4 ("ADOBECODE'BANC'")
@@ -12,15 +12,7 @@ import java.util.*;
 
 public class MinWindowSubstring {
 
-    public static void main(String[] args) {
-        String s1 = "ADOBECODEBANC";
-        String s2 = "ABC";
-
-        int max = minWindow(s1, s2);
-        System.out.println(max);
-    }
-
-    static int minWindow(String s1, String s2) {
+    static int minWindow1(String s1, String s2) {
         /*
         String s1 = "ADOBECODEBANC";
         String s2 = "ABC";
@@ -64,5 +56,70 @@ public class MinWindowSubstring {
         }
 
         return min;
+    }
+
+    private static int minWindow(String s1, String s2) {
+        // String s1 = "ADOBECODEBANC";
+        // String s2 = "ABC";
+
+        // map of s2
+        HashMap<Character, Integer> map = new HashMap<>();
+        for(char ch: s2.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0)+1);
+        }
+        System.out.println(map.toString());
+
+        int count = map.size();
+        int i = 0, j = 0, size = s1.length();
+
+        // String s1 = "ADOBECODEBANC";
+        // String s2 = "ABC";
+        while(j<s1.length()) {
+            // advance j
+            //System.out.println(map.toString() + " " + i + " " + j);
+            while(j<s1.length()) {
+                char ch = s1.charAt(j);
+                if(map.containsKey(ch)) {
+                    map.put(ch, map.get(ch)-1);
+                    count = map.get(ch)==0?count-1:count;
+                }
+
+                System.out.println(map.toString() + " " + i + " " + j);
+
+                if(count == 0) {
+                    size = Math.min(size, j-i+1);
+                    j++;
+                    //System.out.println(i + " " + j + " " + size);
+                    break;
+                }
+                j++;
+            }
+
+            // advance i
+            // String s1 = "ADOBECODEBANC";
+            // String s2 = "ABC";
+            while(i<=j) {
+                char ch = s1.charAt(i++);
+                if(map.containsKey(ch)) {
+                    map.put(ch, map.get(ch)+1);
+                    count = map.get(ch)!=0?count+1:count;
+                }
+                System.out.println(map.toString() + " " + i + " " + j);
+                if(count == 0) {
+                    size = Math.min(size, j-i);
+                } else {
+                    break;
+                }
+            }
+        }
+        return size;
+    }
+
+    public static void main(String[] args) {
+        String s1 = "ADOBECODEBANC";
+        String s2 = "ABC";
+
+        System.out.println(minWindow(s1, s2));
+        System.out.println(minWindow1(s1, s2));
     }
 }
