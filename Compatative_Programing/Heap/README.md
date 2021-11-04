@@ -51,9 +51,9 @@ HashSet<Integer> pq = new HashSet<>();
 1. Distinct Count HashSet
     - [Distinct Elements in Windows of Size K](CountInWindow.java)
 
-1. Subarray Sliding Window
-    - Largest SubArray with Sum 0
-    - Count of Zero Sum Subarray
-    - Length of the largest subarray with contiguous elements
+1. Group Pair
+    - [Group Anagrams Explained](GroupAnagram.java)
+    - [Group Shifted String](GroupShifted.java)
+    - [Isomorphic Strings](IsomorphicString.java)
 
 - [Remove Duplicate Letters and return short string](RemoveDuplicate.java)

@@ -33,7 +33,7 @@ class AnagramCount {
         for(int i=0; i<s2.length(); i++) {
             hm.put(s2.charAt(i), hm.getOrDefault(s2.charAt(i), 0) + 1);
         }
-        int count = hm.size();;
+        int count = hm.size();
 
         /*
             String s1 = "aabaabaa";
@@ -69,6 +69,7 @@ class AnagramCount {
 
             if(count == 0) {
                 result++;
+                //System.out.println(s1.substring(i, j));
             }
         }
         //System.out.println(count);

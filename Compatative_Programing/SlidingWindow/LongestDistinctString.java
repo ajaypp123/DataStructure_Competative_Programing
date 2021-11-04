@@ -12,6 +12,7 @@ public class LongestDistinctString {
 
     private static int getLongString(String str, int k) {
         int i = 0, j = 0, max = 0;
+        int count = 0;
 
         HashMap<Character, Integer> map = new HashMap<>();
 
@@ -22,8 +23,9 @@ public class LongestDistinctString {
             while(map.size() <= k && j<str.length()) {
                 map.put(str.charAt(j), map.getOrDefault(str.charAt(j), 0) + 1);
                 if(map.size() == k) {
-                    System.out.println(i + " " + j);
+                    System.out.println("Pair: I=" + i + ", J=" + j);
                     max = Math.max(max, j-i+1);
+                    count++;
                 }
                 j++;
             }
@@ -37,6 +39,7 @@ public class LongestDistinctString {
                 i++;
             }
         }
+        System.out.println("Total Count: " + count);
         return max;
    }
 
