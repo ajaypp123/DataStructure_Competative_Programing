@@ -25,6 +25,8 @@
 ## Variable Window: Contiguous element
 1. [Largest subarray with contiguous elements](LongContiguousArray.java)
 1. Longest/Count Subarray with Equal 0's and 1's
+1. [Longest Subarray with Equal 0's and 1's and 2's](EqualZOT.java)
+1. [Count Subarray with Equal 0's and 1's and 2's](CountEqualZOT.java)
 
 ## Variable: Maximum Consecutive Ones
 1. Maximum Consecutive Ones

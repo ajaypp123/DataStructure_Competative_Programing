@@ -37,7 +37,6 @@ class K_smallest {
             pq.add(arr[i]);
         }
 
-        int c = 3;
         for(int i=k; i<arr.length; i++) {
             if(pq.peek() > arr[i]) {
                 pq.remove();

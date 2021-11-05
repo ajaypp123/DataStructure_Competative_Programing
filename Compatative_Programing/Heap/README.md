@@ -51,9 +51,23 @@ HashSet<Integer> pq = new HashSet<>();
 1. Distinct Count HashSet
     - [Distinct Elements in Windows of Size K](CountInWindow.java)
 
+1. Sequence
+    - [Arithmetic Sequence](ArithmeticSequence.java)
+
 1. Group Pair
     - [Group Anagrams Explained](GroupAnagram.java)
     - [Group Shifted String](GroupShifted.java)
     - [Isomorphic Strings](IsomorphicString.java)
+    - [Pairs with Equal Sum](PairSum.java)
+    - [Array of Doubled Pairs](DoublePair.java)
+    - Powerful Numbers
+
+1. Pair Sum
+    - Find two elements Pair in array whose sum is K.
+    - Find four elements that sum to a given value.
+
+
+1. Fraction
+    - [Fraction to Recurring Decimal](FractionDecimal.java)
 
 - [Remove Duplicate Letters and return short string](RemoveDuplicate.java)
