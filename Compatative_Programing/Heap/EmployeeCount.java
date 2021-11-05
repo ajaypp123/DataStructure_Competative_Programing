@@ -45,7 +45,7 @@ public class EmployeeCount {
         System.out.println("result = " + result);
     }
 
-    private int getSize(String emp, HashMap<String, HahsSet<String>> hm) {
+    private int getSize(String emp, HashMap<String, HashSet<String>> hm) {
 
         if(hm.get(emp).size() == 0) {
             return 0;
@@ -67,7 +67,7 @@ public class EmployeeCount {
 
     private static void populateResult(Map<String, String> dataSet) {
         // Convert to HashMap graph
-        HashMap<String, HahsSet<String>> hm = new HashMap<>();
+        HashMap<String, HashSet<String>> hm = new HashMap<>();
 
         /*
         for key in dataSet
