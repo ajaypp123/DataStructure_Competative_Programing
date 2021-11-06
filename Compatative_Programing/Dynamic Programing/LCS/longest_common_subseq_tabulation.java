@@ -29,6 +29,23 @@ not match   Max(T[i+1][j], T[i][j+1], T[i+1][j+1])
 
 public class longest_common_subseq_tabulation {
 
+    private static int LCS(String s1, String s2) {
+        int[][] T = new int[s1.length()+1][s2.length()+1];
+
+        for(int i=1; i<T.length; i++) {
+            for(int j=1; j<T[0].length; j++) {
+                // "abcde", "ace"
+                if(s1.charAt(i-1) == s2.charAt(j-1)) {
+                    T[i][j] = 1 + T[i-1][j-1];
+                } else {
+                    T[i][j] = Math.max( T[i-1][j], T[i][j-1] );
+                }
+            }
+        }
+
+        return T[s1.length()][s2.length()];
+    }
+
     public static void main(String[] args) {
         String s1 = "abcde";
         String s2 = "ace";
@@ -36,18 +53,4 @@ public class longest_common_subseq_tabulation {
         System.out.println(output);
     }
 
-    private static int LCS(String s1, String s2) {
-        int[][] T = new int[s2.length()+1][s1.length()+1];
-
-        for(int i=s2.length()-1; i>=0; i--) {
-            for(int j=s1.length()-1; j>=0; j--) {
-                if(s1.charAt(j) == s2.charAt(i)) {
-                    T[i][j] = 1 + T[i+1][j+1];
-                } else {
-                    T[i][j] = Math.max(Math.max(T[i+1][j], T[i][j+1]), T[i+1][j+1]);
-                }
-            }
-        }
-        return T[0][0];
-    }
 }

@@ -20,6 +20,28 @@ Output : 110
 */
 
 public class knapsack_memoization {
+
+    private static int knapsack(int[] W, int[] P, int n, int capacity, int[][] T) {
+        if(n==0 || capacity==0) {
+            return 0;
+        }
+
+        if(T[n][capacity] != 0) {
+            return T[n][capacity];
+        }
+        // select or not
+        if(capacity >= W[n-1]) {
+            int x = knapsack(W, P, n-1, capacity, T);
+            int y = knapsack(W, P, n, capacity-W[n-1], T) + P[n-1];
+
+            T[n][capacity] = Math.max(x, y);
+        } else {
+            T[n][capacity] = knapsack(W, P, n-1, capacity, T);
+        }
+
+        return T[n][capacity];
+    }
+
     public static void main(String[] args) {
         int[] W = {1, 3, 4, 5};
         int[] P = {10, 40, 50, 70};
@@ -29,22 +51,6 @@ public class knapsack_memoization {
 
         int result = knapsack(W, P, W.length, capacity, T);
         System.out.println(result);
-    }
-
-    private static int knapsack(int[] W, int[] P, int n, int capacity, int[][] T) {
-        if(n == 0 || capacity <= 0) {
-            return 0;
-        }
-        if(T[n][capacity] != 0) {
-            return T[n][capacity];
-        }
-        if(capacity-W[n-1] < 0) {
-            return knapsack(W, P, n-1, capacity, T);
-        }
-        int py = P[n-1] + knapsack(W, P, n, capacity-W[n-1], T);
-        int pn = knapsack(W, P, n-1, capacity, T);
-        T[n][capacity] = Math.max(py, pn);
-        return T[n][capacity];
     }
 
 }

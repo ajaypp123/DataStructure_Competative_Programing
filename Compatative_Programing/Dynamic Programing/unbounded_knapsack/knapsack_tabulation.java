@@ -28,6 +28,26 @@ result = d[W]
 */
 
 public class knapsack_tabulation {
+
+    static int knapSack(int N, int W, int val[], int wt[]) {
+        int[] profit = new int[W+1];
+
+        if(N==0 || W==0) {
+            return 0;
+        }
+
+        for(int i=0; i<wt.length; i++) {
+            for(int j=1; j<profit.length; j++) {
+                // yes or no
+                if(j-wt[i] >= 0) {
+                    profit[j] = Math.max(profit[j], val[i] + profit[j-wt[i]]);
+                }
+            }
+        }
+
+        return profit[W];
+    }
+
     public static void main(String[] args) {
         int[] W = {1, 3, 4, 5};
         int[] P = {10, 40, 50, 70};
@@ -35,24 +55,5 @@ public class knapsack_tabulation {
 
         int result = knapSack(W.length, capacity, P, W );
         System.out.println(result);
-    }
-
-    static int knapSack(int N, int W, int val[], int wt[])
-    {
-        // code here
-        // Initalization
-        int[] res = new int[W+1];
-        res[0] = 0;
-
-        // Fill from 0 to W
-        for(int i=0; i<wt.length; i++) {
-            // For each wt[]
-            for(int j=1; j<res.length; j++) {
-                if(j-wt[i] >= 0) {
-                    res[j] = Math.max(res[j], val[i] + res[j-wt[i]]);
-                }
-            }
-        }
-        return res[W];
     }
 }

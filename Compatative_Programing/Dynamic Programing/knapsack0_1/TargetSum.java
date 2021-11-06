@@ -1,4 +1,5 @@
 
+
 /*
 You are given an integer array nums and an integer target.
 
@@ -23,6 +24,8 @@ Example 2:
 Input: nums = [1], target = 1
 Output: 1
 */
+
+import java.util.Arrays;
 
 public class TargetSum {
     // Similar to - [Count Subset Sum with Given Difference](./knapsack0_1/CountSubsetDiff.java)
@@ -64,6 +67,7 @@ public class TargetSum {
                 }
             }
         }
+        System.out.println(Arrays.toString(T[T.length-1]));
         return count;
     }
 

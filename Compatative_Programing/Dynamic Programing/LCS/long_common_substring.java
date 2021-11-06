@@ -21,25 +21,29 @@ if(i==j) {dia + 1 // update max if > than max}
 
 public class long_common_substring {
 
+    private static int LCS(String s1, String s2) {
+        int[][] T = new int[s1.length()+1][s2.length()+1];
+
+        int max = 0;
+        for(int i=1; i<T.length; i++) {
+            for(int j=1; j<T[0].length; j++) {
+
+                char ch1 = s1.charAt(i-1);
+                char ch2 = s2.charAt(j-1);
+                if(ch1 == ch2) {
+                    T[i][j] = T[i-1][j-1] + 1;
+                    max = Math.max(max, T[i][j]);
+                }
+            }
+        }
+
+        return max;
+    }
+
     public static void main(String[] args) {
         String s1 = "abcde";
         String s2 = "abfce";
         int output = LCS(s1, s2);
         System.out.println(output);
-    }
-
-    private static int LCS(String s1, String s2) {
-        int[][] T = new int[s2.length()+1][s1.length()+1];
-
-        for(int i=s2.length()-1; i>=0; i--) {
-            for(int j=s1.length()-1; j>=0; j--) {
-                if(s1.charAt(j) == s2.charAt(i)) {
-                    T[i][j] = 1 + T[i+1][j+1];
-                } else {
-                    T[i][j] = 0;
-                }
-            }
-        }
-        return T[0][0];
     }
 }

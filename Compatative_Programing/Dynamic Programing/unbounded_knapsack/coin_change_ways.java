@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /*
-    cuts profit = 1 2 3
+    coins = 1 2 3
     N = 5
     Output: (total ways) 5
     1 1 1 1 1
