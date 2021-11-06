@@ -2,7 +2,7 @@
 arr: [1, 11, 5, 6]
 output: 1
 
-For all : (Devide element in 2 parts)
+For all : (Divide element in 2 parts)
 [1] [11, 5, 6]
 [11,1] [5,6]
 

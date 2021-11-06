@@ -1,47 +1,25 @@
 
+
 /*
-
-Check if subset is available, whose sum is N
-        int[] W = {2, 5, 1, 3, 4};
-        int capacity = 7;
-        int item = 5;
-        Output: true // 2+7
+Given array, can we divide array in two subset
+so that sum of both partition is equal
 
 
-2 3 7 8 10
-
-11
-
-    0   1   3   4   5   6   7   8   9   10 11
-0   t   f   f   f ...
-2   t
-3   t               ij
-7   .
-8
-10
-
-5
-3
-
-3>5 x
-5>3 yes no
-yes arr[i-1] + T[i-1][j-arr[i-1]]
-no  arr[i-1][j]
-[i][j]
+{1, 5, 11, 5}
+Output: true   [11]  [5, 5, 1]
 
 */
 
-public class subset_sum_tabulation {
-    public static void main(String[] args) {
-        int[] W = {2, 5, 1, 3, 4};
-        int capacity = 7;
-        int item = 5;
 
-        boolean result = subset(W, capacity, item);
-        System.out.println(result);
-    }
 
-    private static boolean subset(int[] arr, int target, int item) {
+public class EqualPartitionSum {
+
+    private static boolean equalPartition(int[] arr, int item) {
+        int target = 0;
+        for(int i=0; i<arr.length; i++) {
+            target += arr[i];
+        }
+        target = target/2;
 
         if(target == 0) {
             return true;
@@ -50,7 +28,7 @@ public class subset_sum_tabulation {
             return false;
         }
 
-        //Initalize
+        //Initialize
         boolean T[][] = new boolean[item+1][target+1];
 
         for(int i=0; i<T.length; i++) {
@@ -72,5 +50,13 @@ public class subset_sum_tabulation {
             }
         }
         return T[item][target];
+    }
+
+    public static void main(String[] args) {
+        int[] W = {1, 5, 11, 5};
+        int item = 4;
+
+        boolean result = equalPartition(W, item);
+        System.out.println(result);
     }
 }

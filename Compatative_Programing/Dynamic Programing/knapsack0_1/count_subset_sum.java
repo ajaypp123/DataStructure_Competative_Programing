@@ -36,7 +36,7 @@ public class count_subset_sum {
     private static int subset_sum(int[] W, int n, int target) {
         int T[][] = new int[n+1][target+1];
 
-        // Initalization
+        // Initialization
         for(int i=0; i<T.length; i++) {
             T[i][0] = 1;
         }

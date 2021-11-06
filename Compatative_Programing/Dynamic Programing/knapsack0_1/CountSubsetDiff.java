@@ -51,7 +51,7 @@ public class CountSubsetDiff {
         int total = 0;
         for(int i=0; i< nums.length; i++) { total += nums[i]; }
 
-        //Initalize
+        //Initialize
         int[][] T = new int[nums.length+1][total+1];
         for(int i=0; i< nums.length+1; i++) { T[i][0] = 1; }
 
@@ -66,6 +66,8 @@ public class CountSubsetDiff {
         }
 
         int count = 0;
+        //s1 + s2 = total  s1-s2 = diff
+        // 2s1 = total + diff  ===>   2s1 - total = diff
 
         for(int j=0; j<T[0].length; j++) {
             //System.out.println(T[T.length-1][j]);
