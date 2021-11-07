@@ -41,4 +41,9 @@
 - [Sequence Pattern Matching](./LCS/SequencePatternMatching.java)
 
 ## MCM
-- Matrix Chain Multiplication
+- [Matrix Chain Multiplication Recursion](./MCM/MCMRecursion.java)
+- [Matrix Chain Multiplication Memoization](./MCM/MCMMemoization.java)
+
+## MCM: Application
+- [Palindrome Partition Recursion](./MCM/PalindromePartitionRecursion.java)
+- [Palindrome Partition Memoization](./MCM/PalindromePartitionMemoization.java)

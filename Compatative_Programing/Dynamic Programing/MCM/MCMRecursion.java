@@ -1,4 +1,5 @@
 
+
 /**
 Input: p[] = {40, 20, 30, 10, 30}
 Output: 26000
@@ -20,35 +21,42 @@ There are only two matrices of dimensions 10x20 and 20x30. So there
 is only one way to multiply the matrices, cost of which is 10*20*30
 */
 
-public class MatrixChainMultiplication {
+
+
+
+public class MCMRecursion {
+
+    private static int MCM(int[] arr, int i, int j) {
+        // 1,3,1,5,8,1
+        if(j-i <= 0) {
+            return 0;
+        }
+
+        int min = Integer.MAX_VALUE;
+        // i to k k+1 to j
+        for(int k=i; k<j; k++) {
+            min = Math.min(min, MCM(arr, i, k) + MCM(arr, k+1, j) +
+                                    arr[i-1] * arr[k] * arr[j]);
+        }
+        return min;
+    }
+
+    private static int MCM(int[] arr) {
+        // need at least 2 matrix for multiplication
+        if(arr.length <= 2) {
+            return 0;
+        }
+
+        // i to k and k+1 to j
+        // eg 20, 30, 20 40 then i=20 and j=20 and k=30,20
+        int i = 1, j = arr.length - 1;
+        return MCM(arr, i, j);
+    }
 
     public static void main(String[] args) {
         int arr[] = new int[]{1,3,1,5,8,1};
 
         int min = MCM(arr);
         System.out.println(min);
-    }
-
-    private static int MCM(int[] arr) {
-        if(arr.length < 3) {
-            return 0;
-        }
-        return MCM(arr, 1, arr.length-1);
-    }
-
-    private static int MCM(int[] arr, int i, int j) {
-        // 1,3,1,5,8,1
-        if(i>=j) {
-            return 0;
-        }
-
-        int min = Integer.MAX_VALUE;
-        for(int k=i; k<j; k++) {
-            int total = MCM(arr, i, k) + MCM(arr, k+1, j)
-                        + (arr[i-1] * arr[k] * arr[j]);
-            min = Math.min(total, min);
-        }
-
-        return min;
     }
 }
