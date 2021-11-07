@@ -43,10 +43,10 @@ public class PalindromePartitionMemoization {
         int min = Integer.MAX_VALUE;
         // i to k, k+1 to j
         for(int k=i; k<j; k++) {
-            int x = partitionCount(str, i, k, T);
-            int y = partitionCount(str, k+1, j, T);
+            T[i][k] = partitionCount(str, i, k, T);
+            T[k+1][j] = partitionCount(str, k+1, j, T);
 
-            min = Math.min(min, x + y + 1);
+            min = Math.min(min, T[i][k] + T[k+1][j] + 1);
         }
         T[i][j] = min;
         return T[i][j];

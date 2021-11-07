@@ -47,3 +47,4 @@
 ## MCM: Application
 - [Palindrome Partition Recursion](./MCM/PalindromePartitionRecursion.java)
 - [Palindrome Partition Memoization](./MCM/PalindromePartitionMemoization.java)
+- [Evaluate Expression to True Boolean Parenthesization](./MCM/BooleanParenthesis.java)
