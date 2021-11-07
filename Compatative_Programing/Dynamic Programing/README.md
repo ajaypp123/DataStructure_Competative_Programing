@@ -31,3 +31,14 @@
 
 ## LCS: Application
 - [Longest Common Substring](./LCS/long_common_substring.java)
+- [Printing Longest common subsequence](./LCS/print_LC_subseq.java)
+- [Shortest Common SuperSequence](./LCS/sort_common_superseq.java)
+- [Minimum Number of Insertion and Deletion to convert String a to String b](./LCS/convert_a_to_b.java)
+- [Longest Palindromic Subsequence](./LCS/longest_palen_sub.java)
+- [Minimum number of deletion in a string to make it a palindrome](./LCS/min_delete_to_pal.java)
+- Minimum number of insertion in a string to make it a palindrome
+- [Longest repeating subsequence](./LCS/long_reapeat_subseq.java)
+- [Sequence Pattern Matching](./LCS/SequencePatternMatching.java)
+
+## MCM
+- Matrix Chain Multiplication

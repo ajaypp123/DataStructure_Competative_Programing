@@ -3,11 +3,8 @@
  * str = AABEBCDD
  * output: ABD
  * ========================
- *
  *       s1 = s2 = AABEBCDD
  *       Output = LCS where i!=j
- *
- *
  */
 
 public class long_reapeat_subseq {

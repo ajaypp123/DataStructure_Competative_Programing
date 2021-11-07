@@ -1,7 +1,7 @@
 
 
 /**
- * Given 2 string, apply inserstion and deletion and convert
+ * Given 2 string, apply insertion and deletion and convert
  * s1 to s2
  *
  * s1 = "heap"

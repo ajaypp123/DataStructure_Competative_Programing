@@ -29,14 +29,45 @@ not match   Max(T[i+1][j], T[i][j+1], T[i+1][j+1])
 
 public class print_LC_subseq {
 
-    public static void main(String[] args) {
-        String s1 = "abcde";
-        String s2 = "ace";
-        String output = LCS(s1, s2);
-        System.out.println(output);
+    private static String getString(String s1, String s2, int[][] T) {
+        String result = "";
+
+        // "abcde","ace"
+        int i=s1.length(), j=s2.length();
+
+        while(i * j != 0) {
+            char ch1 = s1.charAt(i-1);
+            char ch2 = s2.charAt(j-1);
+
+            if(ch1 == ch2) {
+                result = ch1 + result;
+                i--; j--;
+            } else {
+                if(T[i-1][j] > T[i][j-1]) i--; else j--;
+            }
+        }
+
+        return result;
     }
 
-    private static String LCS(String s1, String s2) {
+    private static String LCSMethod2(String s1, String s2) {
+        int[][] T = new int[s1.length()+1][s2.length()+1];
+
+        for(int i=1; i<T.length; i++) {
+            for(int j=1; j<T[0].length; j++) {
+                // "abcde", "ace"
+                if(s1.charAt(i-1) == s2.charAt(j-1)) {
+                    T[i][j] = 1 + T[i-1][j-1];
+                } else {
+                    T[i][j] = Math.max( T[i-1][j], T[i][j-1] );
+                }
+            }
+        }
+
+        return getString(s1, s2, T);
+    }
+
+    private static String LCSMethod1(String s1, String s2) {
         String[][] T = new String[s2.length()+1][s1.length()+1];
 
         for(int i=s2.length(); i>=0; i--) {
@@ -56,5 +87,15 @@ public class print_LC_subseq {
             }
         }
         return T[0][0];
+    }
+
+    public static void main(String[] args) {
+        String s1 = "abcde";
+        String s2 = "ace";
+        String output = LCSMethod2(s1, s2);
+        System.out.println(output);
+
+        output = LCSMethod1(s1, s2);
+        System.out.println(output);
     }
 }
