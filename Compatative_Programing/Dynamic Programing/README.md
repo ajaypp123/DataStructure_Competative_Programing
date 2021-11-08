@@ -14,15 +14,24 @@
 - [Count Subset Sum with Given Difference](./knapsack0_1/CountSubsetDiff.java)
 - [Target Sum Subset](./knapsack0_1/TargetSum.java)
 
+## KnapSack 0/1: Application 2
+- [Maximum sum such that no two elements are adjacent](./knapsack0_1/NonAdjMax.java)
+
 ## Knapsack unbound
 - [KnapSack Recursion](./unbounded_knapsack/Knapsack_recursion.java)
 - [KnapSack Memoization](./unbounded_knapsack/knapsack_memoization.java)
 - [KnapSack Tabulation](./unbounded_knapsack/knapsack_tabulation.java)
 
-## Knapsack unbound: Application
+## Knapsack unbound: Application 1
 - [Rod Cutting Problem](./unbounded_knapsack/rod_cutting.java)
 - [Coin Change: Maximum number of ways](./unbounded_knapsack/coin_change_ways.java)
 - [Coin Change: Minimum number of coin](./unbounded_knapsack/coin_change_min.java)
+- [Climbing Stairs Total_Way/ Min_Move](./unbounded_knapsack/ClimbingStairs.java)
+
+## Knapsack unbound: Application 2
+- [Binary Strings with no consecutive 0's](./unbounded_knapsack/CountBinary.java)
+- [Count possible ways to construct buildings](./unbounded_knapsack/CountBuilding.java)
+- [Count Possible Decodings of a given Digit Sequence](./unbounded_knapsack/CountDecoding.java)
 
 ## Longest Common Subsequence
 - [Longest common subsequence Recursion](./LCS/longest_common_sub_recur.java)
@@ -39,6 +48,11 @@
 - Minimum number of insertion in a string to make it a palindrome
 - [Longest repeating subsequence](./LCS/long_reapeat_subseq.java)
 - [Sequence Pattern Matching](./LCS/SequencePatternMatching.java)
+- [Number of subsequences of the form a^i b^j c^k](./LCS/CountABCSeq.java)
+
+# Cost Path
+- [Maze Minimum cost path](./Path/MazeMinCost.java)
+- Collect Maximum Gold
 
 ## MCM
 - [Matrix Chain Multiplication Recursion](./MCM/MCMRecursion.java)
@@ -47,4 +61,8 @@
 ## MCM: Application
 - [Palindrome Partition Recursion](./MCM/PalindromePartitionRecursion.java)
 - [Palindrome Partition Memoization](./MCM/PalindromePartitionMemoization.java)
-- [Evaluate Expression to True Boolean Parenthesization](./MCM/BooleanParenthesis.java)
+
+
+
+- [Evaluate Expression to True Boolean Parenthesization](./MCM/BooleanParenthesis.java)**TBD**
+- [Scrambled String](./MCM/ScrambledString.java)**TBD**

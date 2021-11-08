@@ -29,19 +29,59 @@ in 4 ways ((T|T)&(F^T)), (T|(T&(F^T))), (((T|T)&F)^T)
 and (T|((T&F)^T)).
 */
 
-
+/*
 public class BooleanParenthesis {
 
-    private static int countParenth(char symb[], char oper[], int n) {
-        if(symb.length == 0 || symb.length==1 && symb[0]=='F') {
+    private static char getResult(char ch1, char ch2, char op) {
+        if(op == '^') {
+            if(ch1 == ch2) {
+                return 'F';
+            } else {
+                return 'T';
+            }
+        } else if(op == '|') {
+            if(ch1 == 'T' || ch2 == 'T') {
+                return 'T';
+            }
+            return 'F';
+        } else {
+            // &
+            if(ch1 == 'T' && ch2 == 'T') {
+                return 'T';
+            }
+            return 'F';
+        }
+    }
+
+    private static int totalWays(char symb[], char oper[], int i, int j) {
+        // T, T, F, T
+        if(j-i <= 0) {
             return 0;
         }
-        if(symb.length==1 && symb[0]=='T')
-            return 1;
 
+        int count = 0;
+        for(int k=i; k<j; k++) {
+            char ch1 = totalWays(symb, oper, i, k);
+            char ch2 = totalWays(symb, oper, k+1, j);
+
+            count = getResult(ch1, ch2, oper[i]) == 'T'? count+1: count;
+        }
+        return count;
+    }
+
+    private static int countParenth(char symb[], char oper[], int n) {
+        if(symb.length == 0) {
+            return 0;
+        }
+
+        // T, T, F, T
+        int i=0, j=symb.length; // k from i to j-1
         int[][] T = new int[symb.length][symb.length];
 
-        return 0;
+        for(int i=0; i<T.length; i++) {
+            Arrays.fill(T[i], -1);
+        }
+        return totalWays(symb, oper, i, j);
     }
 
 
@@ -57,3 +97,4 @@ public class BooleanParenthesis {
             countParenth(symbols, operators, n));
     }
 }
+*/
