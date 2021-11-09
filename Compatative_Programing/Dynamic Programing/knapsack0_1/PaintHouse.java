@@ -31,9 +31,11 @@ public class PaintHouse {
                 if i == 0
                     cost[i][j] = cost[i][j]
                 else
-                    cost[i][j] = Min(
-                            i-1 row but not j
+                    cost[i][j] = cost[i][j] + Min(
+                            i-1 row but not cost[i-1][j]
                         )
+
+        return min of last row
         */
         return 0;
     }

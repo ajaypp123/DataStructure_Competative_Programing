@@ -16,6 +16,11 @@
 
 ## KnapSack 0/1: Application 2
 - [Maximum sum such that no two elements are adjacent](./knapsack0_1/NonAdjMax.java)
+- [Paint House](./knapsack0_1/PaintHouse.java)
+- [Painting Fence Algorithm](./knapsack0_1/PaintFence.java)
+- [Tiling with Dominoes](./knapsack0_1/TiltingDominoes.java) ***TBD**
+- [Friends Pairing Problem](./knapsack0_1/FriendPair.java)
+- [Count number of ways to partition a set into k subsets](./knapsack0_1/PartitionSubset.java)
 
 ## Knapsack unbound
 - [KnapSack Recursion](./unbounded_knapsack/Knapsack_recursion.java)
@@ -28,10 +33,19 @@
 - [Coin Change: Minimum number of coin](./unbounded_knapsack/coin_change_min.java)
 - [Climbing Stairs Total_Way/ Min_Move](./unbounded_knapsack/ClimbingStairs.java)
 
+
 ## Knapsack unbound: Application 2
 - [Binary Strings with no consecutive 0's](./unbounded_knapsack/CountBinary.java)
 - [Count possible ways to construct buildings](./unbounded_knapsack/CountBuilding.java)
 - [Count Possible Decodings of a given Digit Sequence](./unbounded_knapsack/CountDecoding.java)
+
+## Longest Increasing subsequence
+- [Longest Increasing subsequence Recursion](./LIS/LISRecursion.java)
+- [Longest Increasing subsequence Memoization](./LIS/LISMemoization.java)
+- [Longest Increasing subsequence Tabulation](./LIS/LISTabulation.java)
+
+## LIS: Application
+- [Longest Bitonic Subsequence Memoization](./LIS/BitonicSequenceMemoization.java)
 
 ## Longest Common Subsequence
 - [Longest common subsequence Recursion](./LCS/longest_common_sub_recur.java)
@@ -53,6 +67,8 @@
 # Cost Path
 - [Maze Minimum cost path](./Path/MazeMinCost.java)
 - Collect Maximum Gold
+- Largest Square Sub matrix of all 1's
+- [Minimum Jumps Dynamic Programming](./Path/PrintAllJump.java)
 
 ## MCM
 - [Matrix Chain Multiplication Recursion](./MCM/MCMRecursion.java)
