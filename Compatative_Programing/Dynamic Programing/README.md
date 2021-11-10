@@ -32,7 +32,7 @@
 - [Coin Change: Maximum number of ways](./unbounded_knapsack/coin_change_ways.java)
 - [Coin Change: Minimum number of coin](./unbounded_knapsack/coin_change_min.java)
 - [Climbing Stairs Total_Way/ Min_Move](./unbounded_knapsack/ClimbingStairs.java)
-
+- [Perfect Square](./unbounded_knapsack/PerfectSquare.java)
 
 ## Knapsack unbound: Application 2
 - [Binary Strings with no consecutive 0's](./unbounded_knapsack/CountBinary.java)
@@ -46,6 +46,8 @@
 
 ## LIS: Application
 - [Longest Bitonic Subsequence Memoization](./LIS/BitonicSequenceMemoization.java)
+- [Maximum Non-Overlapping Bridges](./LIS/NonOverLapBridges.java)
+- [Russian Doll Envelopes](./LIS/RussianDollEnvelopes.java)
 
 ## Longest Common Subsequence
 - [Longest common subsequence Recursion](./LCS/longest_common_sub_recur.java)
@@ -64,11 +66,19 @@
 - [Sequence Pattern Matching](./LCS/SequencePatternMatching.java)
 - [Number of subsequences of the form a^i b^j c^k](./LCS/CountABCSeq.java)
 
-# Cost Path
+## Cost Path
 - [Maze Minimum cost path](./Path/MazeMinCost.java)
 - Collect Maximum Gold
 - Largest Square Sub matrix of all 1's
 - [Minimum Jumps Dynamic Programming](./Path/PrintAllJump.java)
+
+## Catalan Numbers
+- [Catalan Number](./CatalanNumber/NthCatalanNumber.java)
+- Number of possible Binary Search Trees with n keys`(Ans = Cn)`
+- Count Of Valleys And Mountains`(Ans = Cn)`
+- Combinations of Balanced Parentheses Dynamic Programming`(Ans = Cn)`
+- Count the number of full binary trees (A rooted binary tree is full if every vertex has either two children or no children) with n+1 leaves.
+- Given a number n, return the number of ways you can draw n chords in a circle with 2 x n points such that no 2 chords intersect.
 
 ## MCM
 - [Matrix Chain Multiplication Recursion](./MCM/MCMRecursion.java)

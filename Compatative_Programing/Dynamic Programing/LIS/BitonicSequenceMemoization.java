@@ -14,10 +14,11 @@ Input arr[] = {80, 60, 30, 40, 20, 10}
 Output: 5 (A Longest Bitonic Subsequence of length 5 is 80, 60, 30,
 */
 
+import java.util.*;
 
 public class BitonicSequenceMemoization {
 
-    private static int getLongLength(int[] arr, int i, int prev, boolean flag, int[] T) {
+    private static int getLongLengthDesc(int[] arr, int i, int prev, int[] T) {
         if(i == T.length) {
             return 0;
         }
@@ -29,36 +30,36 @@ public class BitonicSequenceMemoization {
 
         // 1, 101, 2, 3, 100, 4, 5
         int max = 0;
-        // if flag is set true then search small element
-        if(flag) {
-
-            if(prev < arr[i-1]) {
-                // can not include
-                max = getLongLength(arr, i+1, prev, flag, T);
-            } else {
-                max = Math.max(
-                                getLongLength(arr, i+1, prev, flag, T),  // no
-                                1 + getLongLength(arr, i+1, arr[i-1], flag, T)  // yes
-                            );
-            }
+        if(arr[i-1] >= prev) {
+            max = getLongLengthInc(arr, i+1, prev, T);
         } else {
-            // if flag is set false then search big element
-            if(prev > arr[i-1]) {
+            max = Math.max(
+            1 + getLongLengthInc(arr, i+1, arr[i-1], T),
+            getLongLengthInc(arr, i+1, prev, T));
+        }
+        T[i] = max;
+        return max;
+    }
 
-                // include mean set flag
-                max = Math.max(
-                                getLongLength(arr, i+1, prev, flag, T),  // no
-                                1 + getLongLength(arr, i+1, arr[i-1], true, T)  // yes
-                            );
-            } else {
-                max = Math.max(
-                                getLongLength(arr, i+1, prev, flag, T),  // no
-                                1 + getLongLength(arr, i+1, arr[i-1], flag, T)  // yes
-                            );
-            }
-
+    private static int getLongLengthInc(int[] arr, int i, int prev, int[] T) {
+        if(i == T.length) {
+            return 0;
         }
 
+        if(T[i] != 0) {
+            System.out.println("Found");
+            return T[i];
+        }
+
+        // 1, 101, 2, 3, 100, 4, 5
+        int max = 0;
+        if(arr[i-1] < prev) {
+            max = getLongLengthInc(arr, i+1, prev, T);
+        } else {
+            max = Math.max(
+            1 + getLongLengthInc(arr, i+1, arr[i-1], T),
+            getLongLengthInc(arr, i+1, prev, T));
+        }
         T[i] = max;
         return max;
     }
@@ -69,11 +70,23 @@ public class BitonicSequenceMemoization {
         }
 
         // arr, i
-        // if flag false - search increasing
-        // if flag true - search descring
         int T[] = new int[arr.length + 1];
         T[0] = 0;
-        return getLongLength(arr, 1, 0, false, T);
+        // inc
+        getLongLengthInc(arr, 1, 0, T);
+        //desc
+        int T1[] = new int[arr.length + 1];
+        T1[0] = 0;
+        getLongLengthDesc(arr, 1, 0, T1);
+
+        System.out.println(Arrays.toString(T));
+        System.out.println(Arrays.toString(T1));
+
+        int ans = 0;
+        for(int i=0; i<T.length; i++) {
+            ans = Math.max(ans, T[i] + T1[i] - 1);
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
