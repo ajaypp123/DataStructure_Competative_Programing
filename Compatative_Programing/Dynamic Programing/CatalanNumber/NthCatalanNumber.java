@@ -33,6 +33,6 @@ public class NthCatalanNumber {
     }
 
     public static void main(String[] args) {
-        System.out.println(catalanValue(5));
+        System.out.println(catalanValue(4));
     }
 }

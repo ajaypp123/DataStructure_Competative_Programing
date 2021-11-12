@@ -40,3 +40,8 @@
 
 ## Variable size window HashMap
 1. [Check if Array Pairs are Divisible by K](DivisiblePair.java)
+
+## Kadane's Algorithm
+1. [Maximum Sum Subarray](MaxSumSubarray.java)
+1. [K Concatenation Maximum Sum](KConcatMaxSum.java)
+1. [Optimal Strategy for a Game](OptimalGame.java)

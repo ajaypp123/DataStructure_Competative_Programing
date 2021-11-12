@@ -48,6 +48,7 @@
 - [Longest Bitonic Subsequence Memoization](./LIS/BitonicSequenceMemoization.java)
 - [Maximum Non-Overlapping Bridges](./LIS/NonOverLapBridges.java)
 - [Russian Doll Envelopes](./LIS/RussianDollEnvelopes.java)
+- [Largest Sum Contiguous Subarray (SlidingWindow/DP)](./LIS/LargestSum.java)
 
 ## Longest Common Subsequence
 - [Longest common subsequence Recursion](./LCS/longest_common_sub_recur.java)
@@ -59,12 +60,15 @@
 - [Printing Longest common subsequence](./LCS/print_LC_subseq.java)
 - [Shortest Common SuperSequence](./LCS/sort_common_superseq.java)
 - [Minimum Number of Insertion and Deletion to convert String a to String b](./LCS/convert_a_to_b.java)
+- [Minimum ASCII Delete Sum for Two Strings](./LCS/MinASCII.java)
 - [Longest Palindromic Subsequence](./LCS/longest_palen_sub.java)
 - [Minimum number of deletion in a string to make it a palindrome](./LCS/min_delete_to_pal.java)
 - Minimum number of insertion in a string to make it a palindrome
 - [Longest repeating subsequence](./LCS/long_reapeat_subseq.java)
 - [Sequence Pattern Matching](./LCS/SequencePatternMatching.java)
 - [Number of subsequences of the form a^i b^j c^k](./LCS/CountABCSeq.java)
+- [Wildcard Matching Dynamic Programming]
+- [Regular Expression Matching](./LCS/ExpressionMatching.java)
 
 ## Cost Path
 - [Maze Minimum cost path](./Path/MazeMinCost.java)
@@ -73,12 +77,14 @@
 - [Minimum Jumps Dynamic Programming](./Path/PrintAllJump.java)
 
 ## Catalan Numbers
+// 1, 1, 2, 5, 14
 - [Catalan Number](./CatalanNumber/NthCatalanNumber.java)
 - Number of possible Binary Search Trees with n keys`(Ans = Cn)`
 - Count Of Valleys And Mountains`(Ans = Cn)`
 - Combinations of Balanced Parentheses Dynamic Programming`(Ans = Cn)`
+- Non Intersecting Chord in circle`Ans for n = Catalan(n/2)`
+- Number of triangle in polygon.`Catalan(n-2)`
 - Count the number of full binary trees (A rooted binary tree is full if every vertex has either two children or no children) with n+1 leaves.
-- Given a number n, return the number of ways you can draw n chords in a circle with 2 x n points such that no 2 chords intersect.
 
 ## MCM
 - [Matrix Chain Multiplication Recursion](./MCM/MCMRecursion.java)
@@ -87,7 +93,7 @@
 ## MCM: Application
 - [Palindrome Partition Recursion](./MCM/PalindromePartitionRecursion.java)
 - [Palindrome Partition Memoization](./MCM/PalindromePartitionMemoization.java)
-
+- [Burst Balloons](./MCM/BurstBalloons.java)
 
 
 - [Evaluate Expression to True Boolean Parenthesization](./MCM/BooleanParenthesis.java)**TBD**
