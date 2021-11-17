@@ -28,7 +28,7 @@ PriorityQueue<Integer> pq = new PriorityQueue<>();
     - [Top Kth high frequency element](KTopFre.java)
         - [Frequency Sort](FreqSort.java)
     - [Kth closest point](ClosestPoint.java)
-    - [Merge k sorted list](MergeKSorted.java) ***TBD**
+    - [Merge k sorted list](MergeKSorted.java)
 
 1. Optimal Merge Solution
     - [Connect Ropes to Minimize the Cost](ConnectRope.java)
