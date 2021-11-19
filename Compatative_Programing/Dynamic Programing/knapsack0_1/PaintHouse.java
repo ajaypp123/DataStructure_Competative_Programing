@@ -15,7 +15,40 @@ Therefore, the total cost = 2 + 5 + 3 = 10.
 import java.lang.*;
 
 public class PaintHouse {
+        // Memoization
+        private static int minCostRecursion(int costs[][], int i, int j, int[][] T) {
+        if(i>=costs.length || j>=3) {return 0;}
+    
+        if(T[i][j] != -1) {
+            return T[i][j];
+        }
+        
+        T[i][j] = costs[i][j];
+        int min = Integer.MAX_VALUE;
+        for(int c=0; c<3; c++) {
+            if(c != j) {
+                min = Math.min(min, minCostRecursion(costs, i+1, c, T));
+            }
+        }
+        T[i][j] += min;
+        return T[i][j];
+    }
 
+    private static int minCost2(int costs[][]) {
+        int T[][] = new int[costs.length][costs[0].length];
+        for(int i=0; i<T.length; i++) {
+            Arrays.fill(T[i], -1);
+        }
+        
+        int min = Integer.MAX_VALUE;
+        for(int p=0; p<3; p++) {
+            min = Math.min(min, minCostRecursion(costs, 0, p, T));
+            T[0][p] = costs[0][p] + min;
+        }
+        return min;
+    }
+    
+    // Tabulation
     private static int minCost(int costs[][]) {
         if(costs.length * costs[0].length == 0) {
             return 0;
@@ -49,5 +82,6 @@ public class PaintHouse {
 
         // Function Call
         System.out.println(minCost(costs));
+        System.out.println(minCost2(costs));
     }
 }
