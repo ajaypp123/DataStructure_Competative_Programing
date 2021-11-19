@@ -15,8 +15,8 @@
 - [Target Sum Subset](./knapsack0_1/TargetSum.java)
 
 ## KnapSack 0/1: Application 2
-- [Maximum sum such that no two elements are adjacent](./knapsack0_1/NonAdjMax.java)
-- [Paint House](./knapsack0_1/PaintHouse.java)
+- [Maximum sum such that no two elements are adjacent Memoization/Tabulation](./knapsack0_1/NonAdjMax.java)
+- [Paint House Memoization/Tabulation](./knapsack0_1/PaintHouse.java)
 - [Painting Fence Algorithm](./knapsack0_1/PaintFence.java)
 - [Tiling with Dominoes](./knapsack0_1/TiltingDominoes.java) ***TBD**
 - [Friends Pairing Problem](./knapsack0_1/FriendPair.java)
