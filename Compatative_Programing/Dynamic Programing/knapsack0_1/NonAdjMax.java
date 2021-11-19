@@ -16,6 +16,22 @@ Output : 20
 
 
 public class NonAdjMax {
+    
+    private static int maxNonAdjSumMemoization(int[] arr, int n, int[] T) {
+        if(n<=0) {
+            return 0;
+        }
+        
+        if(T[n] != -1) { return T[n]; }
+        
+        //max
+        int max = Math.max(
+            maxNonAdjSum(arr, n-1, T),
+            maxNonAdjSum(arr, n-2, T) + arr[n-1]);
+        T[n] = max;
+        return max;
+    }
+    
     private static int maxNonAdjSum(int[] arr) {
         if(arr.length == 0) {
             return 0;
