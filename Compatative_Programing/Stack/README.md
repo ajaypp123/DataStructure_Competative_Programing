@@ -65,6 +65,7 @@ https://www.youtube.com/playlist?list=PL-Jc9J83PIiE1_SifBEWRsD-fzxrvkja9
     - [Sort Stack](SortStack.java)
 
 1. Balance parenthesis
+    - [Longest continues valid parenthisis](LongestValidParentheses.java)
     - longest Balance parenthesis "((()()"
     - longest Reverse Balance parenthesis ")))()("
     - [Minimum Add To Make Parentheses Valid](MinAddtoBalance.java)
