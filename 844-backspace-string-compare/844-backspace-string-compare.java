@@ -17,7 +17,6 @@ class Solution {
         while(!st.isEmpty()) {
             sb = st.pop() + sb;
         }
-        System.out.println(sb);
         return sb;
     }
     
