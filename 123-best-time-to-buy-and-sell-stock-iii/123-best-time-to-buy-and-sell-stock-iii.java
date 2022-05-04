@@ -1,40 +1,36 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        // dp[i][buy,sell,skip][transection]
-        int[][][] dp=new int[prices.length][3][2];
+        int[][][] dp = new int[prices.length][3][3];
         
-        int j=0;
-        for(int[][] a:dp){
-            int i=0;
-            for(int[] b: a){
-                Arrays.fill(b,-1);
-                a[i]=b;
-                i++;
-            }
-            dp[j]=a;
-            j++;
-        }
+        int end = prices.length-1;
+
+        while(prices[end] == 0) {end--;}
         
-        return f(prices,0,2,1,dp);
+        return solve(prices, 0, end, 2, 1, dp);
     }
     
-    public int f(int[] prices,int i,int remT, int buy, int[][][] dp){    
-        if(i==prices.length) return 0;
-
-        if(remT==0) return 0;
-
-        if(dp[i][remT][buy]!=-1)return dp[i][remT][buy];
-
-        int profit=0;
-        if(buy==1){
-            int buyy=-prices[i] + f(prices,i+1,remT,0,dp);
-            int notbuy=f(prices,i+1,remT,1,dp);
-            profit=Math.max(buyy,notbuy);
-        }else{
-            int sell=prices[i]+f(prices,i+1,remT-1,1,dp);
-            int notsell=f(prices,i+1,remT,0,dp);
-            profit=Math.max(sell,notsell);
+    // i            : buy sell skip
+    // isBuy        : 1 buy, 2 sell
+    private int solve(int[] prices, int i, int limit, int t, int isBuy, int[][][] dp) {
+        if(i > limit || t == 0) {
+            return 0;
         }
-        return dp[i][remT][buy] =profit;
+        
+        if(dp[i][t][isBuy] != 0) {
+            return dp[i][t][isBuy];
+        }
+        
+        int profit = 0;
+        if(isBuy == 1) {
+            profit = Math.max( solve(prices, i+1, limit, t, isBuy, dp),
+                               solve(prices, i+1, limit, t, 2, dp) - prices[i]);
+        } else {
+            profit = Math.max( solve(prices, i+1, limit, t, isBuy, dp),
+                               solve(prices, i+1, limit, t-1, 1, dp) + prices[i]);
+        }
+        
+        dp[i][t][isBuy] = profit;
+        return profit;
     }
+    
 }
